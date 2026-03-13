@@ -1,13 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+import {Header} from "./components/Header.jsx";
+import {Footer} from "./components/Footer.jsx";
+import {LeftContainer} from "./layouts/LeftContainer.jsx";
 
 function App() {
 
-  return (
-    <>
-      <h1>hello world</h1>
-    </>
-  )
+    return (
+        <div className="min-h-screen flex flex-col">
+            <Header/>
+            <main className="flex flex-wrap justify-center items-center flex-grow bg-gray-100 px-10 md:flex-nowrap">
+                <LeftContainer/>
+                {/*<Visialization />*/}
+            </main>
+            <Footer/>
+        </div>
+    )
 }
 
 export default App
