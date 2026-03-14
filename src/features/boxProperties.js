@@ -1,4 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
+
 const initialState = [
     {
         inputNumber: 1,
@@ -30,7 +31,7 @@ const initialState = [
         value: "#fff",
         type: "color",
         slice: "boxProperties",
-    }
+    },
 ]
 
 export const boxSlice = createSlice({
