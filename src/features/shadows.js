@@ -6,7 +6,7 @@ const initialState = [
         id: nanoid(8),
         active: true,
         inset: false,
-        input: [
+        inputs: [
             {
                 inputNumber: 1,
                 name: "Horizontal offset",
@@ -57,7 +57,7 @@ export const shadowSlice = createSlice({
                     id: nanoid(8),
                     active: true,
                     inset: false,
-                    input: [
+                    inputs: [
                         {
                             inputNumber: 1,
                             name: "Horizontal offset",

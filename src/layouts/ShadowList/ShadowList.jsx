@@ -18,7 +18,7 @@ export const ShadowList = () => {
             </div>
             <ul>
                 {shadows.map((shadow, index) => (
-                    <Shadow pannelNumer={index + 1} shadow={shadow} key={shadow.id}/>
+                    <Shadow panelNumber={index + 1} shadow={shadow} key={shadow.id}/>
                 ))}
             </ul>
         </div>
