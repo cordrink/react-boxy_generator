@@ -51,7 +51,7 @@ export const shadowSlice = createSlice({
     reducers: {
         removeShadow: (state, action) => {
         },
-        addShadow: (state, action) => {
+        addShadow: (state) => {
             state.push(
                 {
                     id: nanoid(8),
@@ -97,6 +97,10 @@ export const shadowSlice = createSlice({
             )
         },
         updateShadowValue: (state, action) => {
+            const currentShadow = state.find(shadow => shadow.id === action.payload.shadowID);
+            const currentInput = currentShadow.inputs.find(input => input.inputNumber === action.payload.inputNumber);
+
+            currentInput.value = action.payload.value;
         },
         updateCheckbox: (state, action) => {
         },
