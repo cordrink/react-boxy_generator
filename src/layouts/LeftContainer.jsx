@@ -24,7 +24,7 @@ export const LeftContainer = () => {
                     </button>
                 ))}
             </div>
-            <div className={"overflow-auto"}>
+            <div className={"h-full overflow-auto"}>
                 {tabsList[tabs].component}
             </div>
         </div>

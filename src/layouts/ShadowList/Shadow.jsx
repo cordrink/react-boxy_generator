@@ -41,7 +41,7 @@ export const Shadow = ({panelNumber, shadow}) => {
 
             {toggleShadow && (
                 <>
-                    <div className={"flex items-end px-6 py-4"}>
+                    <div className={"flex items-end px-6 pt-4"}>
                         {/*<Checkbox />*/}
                         <button
                             className={"ml-auto text-sm bg-red-600 text-white hover:bg-red-700 py-1 px-3 rounded"}>Remove

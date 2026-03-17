@@ -1,6 +1,7 @@
 import {Header} from "./components/Header.jsx";
 import {Footer} from "./components/Footer.jsx";
 import {LeftContainer} from "./layouts/LeftContainer.jsx";
+import {Visualization} from "./layouts/Visualization/Visualization.jsx";
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
             <Header/>
             <main className="flex flex-wrap justify-center items-center flex-grow bg-gray-100 px-10 md:flex-nowrap">
                 <LeftContainer/>
-                {/*<Visialization />*/}
+                <Visualization />
             </main>
             <Footer/>
         </div>
