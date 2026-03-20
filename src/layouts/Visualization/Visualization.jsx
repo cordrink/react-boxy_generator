@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 export const Visualization = () => {
     const shadowValue = useSelector(state => state.shadows)
     const boxProperties = useSelector(state => state.boxProperties);
-    console.log(boxProperties[0].value)
+
     return (
         <div className={"flex flex-col p-5 ml-10 lg:ml-28"}>
             <ModalBtn />
