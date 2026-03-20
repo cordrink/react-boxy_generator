@@ -5,7 +5,6 @@ import {ModalResult} from "./ModalResult.jsx";
 export const ModalBtn = () => {
     const [showModal, setShowModal] = useState(false);
 
-
     return (
         <>
             <button
