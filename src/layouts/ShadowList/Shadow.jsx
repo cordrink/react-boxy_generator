@@ -3,9 +3,13 @@ import {useState} from "react";
 import {ShadowColorPicker} from "./ShadowColorPicker.jsx";
 import {ShadowRange} from "./ShadowRange.jsx";
 import {ShadowCheckbox} from "./ShadowCheckbox.jsx";
+import {useDispatch} from "react-redux";
+import {removeShadow} from "../../features/shadows.js";
 
 export const Shadow = ({panelNumber, shadow}) => {
     const [toggleShadow, setToggleShadow] = useState(panelNumber === 1);
+
+    const dispatch = useDispatch();
 
     const shadowInputs = shadow.inputs.map((input, index) => {
         if (input.type === "range") {
@@ -43,10 +47,12 @@ export const Shadow = ({panelNumber, shadow}) => {
             {toggleShadow && (
                 <>
                     <div className={"flex items-end px-6 pt-4"}>
-                        <ShadowCheckbox name={"active"} shadowID={shadow.id} />
-                        <ShadowCheckbox name={"inset"} shadowID={shadow.id} />
+                        <ShadowCheckbox name={"active"} shadowID={shadow.id}/>
+                        <ShadowCheckbox name={"inset"} shadowID={shadow.id}/>
                         <button
-                            className={"ml-auto text-sm bg-red-600 text-white hover:bg-red-700 py-1 px-3 rounded"}>Remove
+                            onClick={() => dispatch(removeShadow(shadow.id))}
+                            className={"ml-auto text-sm bg-red-600 text-white hover:bg-red-700 py-1 px-3 rounded"}
+                        >Remove
                         </button>
                     </div>
                     <div className={"px-6 py-4"}>
